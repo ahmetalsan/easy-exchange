@@ -1,0 +1,27 @@
+@import "../../styles/colors.scss";
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 500px;
+
+  img {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-family: "ProximaNovaBold", sans-serif;
+    color: $secondary-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $primary-color;
+    line-height: 1.5;
+  }
+}

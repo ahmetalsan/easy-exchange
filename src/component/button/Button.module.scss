@@ -1,0 +1,87 @@
+@import "../../styles/colors.scss";
+
+@mixin button-bg($color) {
+  background-color: $color;
+  border: 1px solid darken($color, 10%);
+  color: #fff;
+  &:hover {
+    background-color: lighten($color, 10%);
+  }
+}
+
+@mixin button-outline($color) {
+  background-color: transparent;
+  border: 1px solid $color;
+  color: $color;
+  &:hover {
+    background-color: $color;
+    color: #fff;
+  }
+}
+
+@mixin button-text($color) {
+  background-color: transparent;
+  border: none;
+  color: $color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin button-contained($color) {
+  background-color: $color;
+  border: 1px solid $color;
+  color: #fff;
+  &:hover {
+    background-color: lighten($color, 10%);
+  }
+}
+
+@mixin button-size($padding, $font-size) {
+  padding: $padding;
+  font-size: $font-size;
+}
+
+.btn {
+  font-family: "ProximaNovaMedium", sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &.small {
+    @include button-size(3px 7px, 12px);
+  }
+
+  &.medium {
+    @include button-size(5px 10px, 14px);
+  }
+
+  &.large {
+    @include button-size(10px 20px, 16px);
+  }
+
+  &.primary-contained {
+    @include button-contained($primary-color);
+  }
+
+  &.secondary-contained {
+    @include button-contained($secondary-color);
+  }
+
+  &.primary-outlined {
+    @include button-outline($primary-color);
+  }
+
+  &.secondary-outlined {
+    @include button-outline($secondary-color);
+  }
+
+  &.primary-text {
+    @include button-text($primary-color);
+  }
+
+  &.secondary-text {
+    @include button-text($secondary-color);
+  }
+}
